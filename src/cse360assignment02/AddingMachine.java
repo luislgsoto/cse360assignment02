@@ -4,11 +4,12 @@ package cse360assignment02;
 /**
  *
  * @author Luis Gonzalez
- * class that adds and subtracts
+ * Edited class that adds and subtracts . Can also clear the results
  */
 public class AddingMachine 
 {
   private int total;
+  private String aHistory ="0";
   
   public AddingMachine () 
   {
@@ -17,24 +18,30 @@ public class AddingMachine
   
   public int getTotal () 
   {
-    return 0;
+    return total;
   }
   
   public void add (int value) 
   {
+      total= total+value;
+      aHistory= (aHistory + "+" + value);
   }
 
-  public void subtract (int value) 
+  public void subtract (int value ) 
   {
+      total = total - value;
+      aHistory= (aHistory+"-"+value);
   }
 
   public String toString () 
   {
-    return "";
+    return aHistory;
   }
 
   public void clear() 
   {
+      total=0;
+      aHistory = "0";
   }
     
 }
